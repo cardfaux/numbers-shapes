@@ -41,6 +41,7 @@ export class InputPage extends HTMLElement {
     let shapeHTML = '';
     let shapeClass = '';
     let fillColor = number % 2 !== 0 ? 'green' : 'transparent';
+    let backgroundColor = number % 2 === 0 ? 'red' : 'transparent';
 
     let condition = '';
     if (number % 2 === 0) {
@@ -59,28 +60,24 @@ export class InputPage extends HTMLElement {
 
     switch (condition) {
       case 'divisibleBy2':
-        shapeHTML = '<div class="square"></div>';
+        shapeHTML = `<div style="background-color: ${backgroundColor}; width: 100%; padding: 2rem 0rem;"><div class="square"></div></div>`;
         shapeClass = 'square';
         styles.innerHTML += `.${shapeClass} { width: 100px; height: 100px; border: 1px solid black; background-color: ${fillColor}; }`;
-        shapeContainer.style.backgroundColor = 'var(--color-peach-bud)';
         break;
       case 'divisibleBy3':
-        shapeHTML = '<div class="rectangle"></div>';
+        shapeHTML = `<div style="background-color: ${backgroundColor}; width: 100%; padding: 2rem 0rem;"><div class="rectangle"></div></div>`;
         shapeClass = 'rectangle';
         styles.innerHTML += `.${shapeClass} { width: 200px; height: 100px; border: 1px solid black; background-color: ${fillColor}; }`;
-        shapeContainer.style.backgroundColor = 'var(--color-peach-bud)';
         break;
       case 'lessThan10AndOdd':
-        shapeHTML = '<div class="triangle"></div>';
+        shapeHTML = `<div style="background-color: ${backgroundColor}; width: 100%; padding: 2rem 0rem;"><div class="triangle"></div></div>`;
         shapeClass = 'triangle';
         styles.innerHTML += `.${shapeClass} { width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 100px solid ${fillColor}; background-color: transparent; }`;
-        shapeContainer.style.backgroundColor = 'var(--color-peach-bud)';
         break;
       case 'prime':
-        shapeHTML = '<div class="circle"></div>';
+        shapeHTML = `<div style="background-color: ${backgroundColor}; width: 100%; padding: 2rem 0rem;"><div class="circle"></div></div>`;
         shapeClass = 'circle';
         styles.innerHTML += `.${shapeClass} { width: 100px; height: 100px; border-radius: 50%; border: 1px solid black; background-color: ${fillColor}; }`;
-        shapeContainer.style.backgroundColor = 'var(--color-peach-bud)';
         break;
       default:
         shapeHTML = '<p>No shape for this number</p>';
@@ -102,18 +99,18 @@ export class InputPage extends HTMLElement {
       let condition50 = number % 2 === 0 ? 'greaterThan50AndEven' : 'greaterThan50AndOdd';
       switch (condition50) {
         case 'greaterThan50AndOdd':
-          shapeContainer.style.backgroundColor = 'gray';
+          backgroundColor = 'gray';
+          shapeHTML = `<div style="background-color: ${backgroundColor}; width: 100%; padding: 2rem 0rem;"><div class="square"></div></div>`;
           break;
         case 'greaterThan50AndEven':
-          shapeHTML = '<div class="square"></div>';
+          shapeHTML = `<div style="background-color: ${backgroundColor}; width: 100%; padding: 2rem 0rem;"><div class="square"></div></div>`;
           shapeClass = 'square';
           styles.innerHTML += `.${shapeClass} { width: 100px; height: 100px; border: 1px solid black; background-color: gray; }`;
-          shapeContainer.style.backgroundColor = 'var(--color-peach-bud)';
           break;
       }
-      shapeContainer.innerHTML += `<div>${index}. <br> Condition: ${conditionMessages[condition50]} ${shapeHTML}</div><br>`;
+      shapeContainer.innerHTML += `<div class='test'>${index}. <br> Condition: ${conditionMessages[condition50]} ${shapeHTML}</div><br>`;
     } else {
-      shapeContainer.innerHTML += `<div>${index}. <br> Condition: ${conditionMessages[condition]} ${shapeHTML}</div><br>`;
+      shapeContainer.innerHTML += `<div class='test'>${index}. <br> Condition: ${conditionMessages[condition]} ${shapeHTML}</div><br>`;
     }
   }
 

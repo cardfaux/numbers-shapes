@@ -11,7 +11,6 @@ export class InputPage extends HTMLElement {
     section.classList.add('input-page-section');
     this.root.appendChild(section);
   }
-  // when the component is attached to the dom
   connectedCallback() {
     window.addEventListener('app-input-change', () => {
       this.render();

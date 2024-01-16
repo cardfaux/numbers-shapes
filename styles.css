@@ -1,0 +1,189 @@
+/* CSS RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* CSS RESET */
+
+:root {
+  --color-peach-bud: rgb(249, 181, 172);
+  --color-dynamic-yellow: rgb(255, 230, 109);
+  --color-electric-sheep: rgb(77, 255, 251);
+}
+
+html {
+  font-size: calc(100vw / 1440 * 10);
+}
+
+body,
+html {
+  height: 100%;
+  /* background-color: #c5c54c; */
+  background-color: var(--color-dynamic-yellow);
+}
+
+body {
+  //overflow: hidden;
+}
+
+main {
+  height: 100%;
+}
+
+/* header styles */
+header {
+  /* background-color: rgb(218, 218, 159); */
+  background-color: var(--color-peach-bud);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+nav .nav--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+nav h1 {
+  color: #242424;
+  font-size: 2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #242424;
+  font-size: 2rem;
+}
+/* header styles */

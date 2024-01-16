@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="code wiz">
+    <title>Code Wiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="components/InputPage.css" as="style">
+
+    <script type="module" src="app.js" defer></script>
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- header start -->
+    <header>
+      <nav>
+        <div class="nav--container">
+          <h1>
+          Coding Wiz
+        </h1>
+        <ul>
+          <li>
+            <a class="navlink" href="/">Input</a>
+          </li>
+          <li>
+            <a class="navlink" href="/thanks">Thanks</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- header stop -->
+
+
+    <main></main>
+
+
+    <!-- user input form start -->
+    <!-- change event for form elements -->
+    <template id="input-page-template">
+      <style id="dynamic-styles"></style>
+      <section id="input">
+        <div class="heading">
+          <h1>Numbers & Shapes</h1>
+        </div>
+        <div class="heading--paragraph">
+          <h2>The app explanation</h2>
+          <ul>
+            <li>
+              <p>
+                The first check checks if the number is divisible by 2.
+              </p>
+            </li>
+            <li>
+              <p>
+                The second check checks if the number is divisible by 3.
+              </p>
+            </li>
+            <li>
+              <p>
+                The third check checks if the number is less than 10 & odd.
+              </p>
+            </li>
+            <li>
+              <p>
+                The fourth check checks if the number is prime.
+              </p>
+            </li>
+            <li>
+              <p>
+                After those checks I check if the number is greater than 50 & even or odd.
+              </p>
+            </li>
+          </ul>
+          <p class="first-p">
+            This is in the order provided in the PDF. But in this order, the number 9 does not show a triangle that is green.  It
+            shows a rectangle that is green because the number is divisible by 3, which takes precedent over the less than 10
+            & odd check.
+          </p>
+          <p>
+            There was also some confusion on what you meant by the background & inside the shape should be filled. The 
+            wording of it makes it seem as if they are not the same thing so I just done it with what I thought you meant.
+          </p>
+        </div>
+        <div class="card">
+          <div class="inside--card">
+            <input placeholder="Enter a number" name="userInput" type="text" id="number-input" />
+            <button id="submitBtn">Check</button>
+          </div>
+          <div class="shape--container">
+            <div id="shape-container"></div>
+          </div>
+        </div>
+      </section>
+    </template>
+    <!-- user input form stop -->
+
+    <!-- thanks page template start -->
+    <template id="thanks-page-template">
+      <section>
+        <div class="card">
+          <h4>Thanks for your input</h4>
+          <p id="thanks"></p>
+        </div>
+      </section>
+    </template>
+    <!-- thanks page template stop -->
+  </body>
+</html>
